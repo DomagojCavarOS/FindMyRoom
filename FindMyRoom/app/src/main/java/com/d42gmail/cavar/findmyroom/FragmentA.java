@@ -67,7 +67,7 @@ public class FragmentA extends Fragment{
         PicturesArrayThree=getResources().obtainTypedArray(R.array.picturesThree);
 
         Log.i("slija",""+getResources().getDrawable(R.drawable.vl1));
-        for(int i=0;i<=4;i++){
+        for(int i=0;i<=5;i++){
             Place place1=new Place();
             place1.setPlaceName(PlaceArray[i]);
             place1.setPlaceAdress(AdresArray[i]);

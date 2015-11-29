@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="place">
-        <item>OPG Miletić</item>
-        <item>Villa Lenije</item>
+        <item>Plitvička bajka</item>
+        <item>Stan Rit</item>
         <item>Salaš Bać Roka</item>
         <item>Vuglec Breg</item>
         <item>Radmanove mlinice</item>
+        <item>Gorski Raj</item>
     </array>
 
     <array name="adress">
-        <item>Nikole Tesle 18</item>
+        <item>Plitvička cesta 12</item>
         <item>Osječka 20</item>
         <item>Vukovarska 110</item>
         <item>Škarićevo 151</item>
         <item>Kralja Tomislava 2</item>
+        <item>Hrvatskih kraljeva</item>
     </array>
 
     <array name="city">
-        <item>31000 Županja</item>
-        <item>32100 Vinkovci</item>
-        <item>35100 Otok</item>
+        <item>31000 Plitvice</item>
+        <item>32100 Kopački Rit</item>
+        <item>35100 Đakovo</item>
         <item>22100 Škarićevo</item>
         <item>52100 Omiš</item>
+        <item>63100 Velika Lešnica</item>
     </array>
     
     <array name="description">
-        <item>Mi smo mala tročlana obitelj iz Županje koja je nakon vrlo užurbanog životnog ritma našla svoj mir u
-            idiličnom Karancu u koji smo se zaljubili na prvi pogled. U želji da naš sin odrasta u što zdravijem okruženju,
-            u Baranji smo nakon dužeg traganja pronašli svoju mirnu oazu.</item>
-        <item>Hotel Villa Lenije je kombinacija tradicionalne i moderne arhitekture.
-            Sastoji se od starog obnovljenog dijela Ville Lenije  i novoizgrađenog dijela modernog unutarnjeg uređenja.
-            Hotel Villa Lenije idealno je mjesto za sve one koji žele uživati u idiličnoj atmosferi,
-            a u isto vrijeme u blizini svih događaja u gradu.</item>
+        <item>Nacionalni park Plitvička jezera osobita je geološka i hidrogeološka krška pojava.
+            Kompleks Plitvičkih jezera proglašen je nacionalnim parkom 8. travnja 1949. godine.
+            To je najveći, najstariji i najposjećeniji hrvatski nacionalni park.</item>
+        <item>Park prirode Kopački rit je poplavno područje u Baranji, na sjeveroistoku Hrvatske, između rijeka Dunav na istoku i Drave na jugu.
+            Utemeljen je 1976. godine. Park prirode je ukupne veličine 17.700 ha (177 km2), od čega Specijalni zoološki rezervat obuhvaća 8.000 ha (80 km2).
+            Administrativno se nalazi u općini Bilje, Osječko-baranjska županija. Trenutno je najstariji proglašeni park prirode u Hrvatskoj.</item>
         <item>Na temelju jednog malog seoskog imanja sagrađenog još početkom 20 st. nastao je salaš Bać Roka. Krasi ga ljepota
             tradicionalne arhitekture, mnoštvo zelenila i netaknute prirode, te plodna slavonska zemlja.
             Već samim dolaskom pred salaš osjetit ćete pravi ugođaj pitomog slavonskog sela, a otkrivši sve ljepote
@@ -42,45 +44,52 @@
         <item>Tijekom stoljeća rijeka Cetina na svom je putu prema moru usjekla veličanstven kanjon. Svojim gromoglasnim hukom donosila je snagu koja je stoljećima
             pokretala mlinska kola, a zatim nalazila smiraj u dodiru s morem. U tom spoju brzaca i mirnog toka već u 17. i 18. stoljeću spominju se mlinice, koje svoj procvat
             doživljavaju sredinom 19. stoljeća kad ih preuređuje obitelj Radman po kojoj i danas nose ime.</item>
+        <item>Ova bajkovita kuća nalazi se na proplanku sela Velika Lešnica, pored Broda na Kupi. Slovenska granica udaljena je samo dva, a Delnice 9 kilometara. Nedaleko kuće je
+            Dolina leptira u kojoj možete uživati u ljepoti i bogatstvu boja ovih letećih ljepotana, a osim toga, za vrućih ljetnih dana osvježenje možete potražiti na obližnjoj rijeci Kupi.</item>
     </array>
 
     <integer-array name="rate">
-        <item>3</item>
+        <item>5</item>
         <item>4</item>
         <item>3</item>
         <item>5</item>
         <item>5</item>
+        <item>4</item>
     </integer-array>
 
     <array name="picturesMain">
-        <item>@drawable/m3</item>
-        <item>@drawable/vl1</item>
-        <item>@drawable/bc2</item>
+        <item>@drawable/pj4</item>
+        <item>@drawable/kr2</item>
+        <item>@drawable/sbr2</item>
         <item>@drawable/vb1</item>
         <item>@drawable/rm1</item>
+        <item>@drawable/gk1</item>
     </array>
 
     <array name="picturesOne">
-        <item>@drawable/m2</item>
-        <item>@drawable/vl2</item>
-        <item>@drawable/bc1</item>
+        <item>@drawable/pj1</item>
+        <item>@drawable/kr1</item>
+        <item>@drawable/sbr1</item>
         <item>@drawable/vb2</item>
         <item>@drawable/rm2</item>
+        <item>@drawable/gk2</item>
     </array>
 
     <array name="picturesTwo">
-        <item>@drawable/m1</item>
-        <item>@drawable/vl3</item>
-        <item>@drawable/bc2</item>
+        <item>@drawable/pj3</item>
+        <item>@drawable/kr3</item>
+        <item>@drawable/sbr3</item>
         <item>@drawable/vb3</item>
         <item>@drawable/rm3</item>
+        <item>@drawable/gk3</item>
     </array>
 
     <array name="picturesThree">
-        <item>@drawable/m4</item>
-        <item>@drawable/vl4</item>
-        <item>@drawable/bc3</item>
+        <item>@drawable/pj2</item>
+        <item>@drawable/kr4</item>
+        <item>@drawable/sbr4</item>
         <item>@drawable/vb4</item>
         <item>@drawable/rm4</item>
+        <item>@drawable/gk4</item>
     </array>
 </resources>
