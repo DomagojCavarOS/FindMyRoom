@@ -7,6 +7,7 @@
         <item>Vuglec Breg</item>
         <item>Radmanove mlinice</item>
         <item>Gorski Raj</item>
+
     </array>
 
     <array name="adress">
@@ -16,6 +17,7 @@
         <item>Škarićevo 151</item>
         <item>Kralja Tomislava 2</item>
         <item>Hrvatskih kraljeva</item>
+
     </array>
 
     <array name="city">
@@ -25,6 +27,7 @@
         <item>22100 Škarićevo</item>
         <item>52100 Omiš</item>
         <item>63100 Velika Lešnica</item>
+
     </array>
     
     <array name="description">
@@ -46,7 +49,7 @@
             doživljavaju sredinom 19. stoljeća kad ih preuređuje obitelj Radman po kojoj i danas nose ime.</item>
         <item>Ova bajkovita kuća nalazi se na proplanku sela Velika Lešnica, pored Broda na Kupi. Slovenska granica udaljena je samo dva, a Delnice 9 kilometara. Nedaleko kuće je
             Dolina leptira u kojoj možete uživati u ljepoti i bogatstvu boja ovih letećih ljepotana, a osim toga, za vrućih ljetnih dana osvježenje možete potražiti na obližnjoj rijeci Kupi.</item>
-    </array>
+           </array>
 
     <integer-array name="rate">
         <item>5</item>
@@ -55,6 +58,7 @@
         <item>5</item>
         <item>5</item>
         <item>4</item>
+
     </integer-array>
 
     <array name="picturesMain">
@@ -64,6 +68,7 @@
         <item>@drawable/vb1</item>
         <item>@drawable/rm1</item>
         <item>@drawable/gk1</item>
+
     </array>
 
     <array name="picturesOne">
@@ -73,6 +78,7 @@
         <item>@drawable/vb2</item>
         <item>@drawable/rm2</item>
         <item>@drawable/gk2</item>
+
     </array>
 
     <array name="picturesTwo">
@@ -82,6 +88,7 @@
         <item>@drawable/vb3</item>
         <item>@drawable/rm3</item>
         <item>@drawable/gk3</item>
+
     </array>
 
     <array name="picturesThree">
@@ -91,5 +98,17 @@
         <item>@drawable/vb4</item>
         <item>@drawable/rm4</item>
         <item>@drawable/gk4</item>
+
     </array>
+    <array name="pictureTumbnail">
+        <item>@drawable/tpj4</item>
+        <item>@drawable/tgk1</item>
+        <item>@drawable/tsbr2</item>
+        <item>@drawable/tvb1</item>
+        <item>@drawable/trm1</item>
+        <item>@drawable/tgk1</item>
+
+    </array>
+
+
 </resources>

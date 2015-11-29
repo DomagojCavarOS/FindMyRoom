@@ -30,7 +30,7 @@ public class FragmentA extends Fragment{
     String[] DescriptionArray;
     String[] CityArray;
     int[] RateArray;
-    TypedArray PicturesArrayMain,PicturesArrayOne,PicturesArrayTwo,PicturesArrayThree;
+    TypedArray PicturesArrayMain,PicturesArrayOne,PicturesArrayTwo,PicturesArrayThree,TumbnailArray;
 
     @Nullable
     @Override
@@ -65,8 +65,9 @@ public class FragmentA extends Fragment{
         PicturesArrayOne=getResources().obtainTypedArray(R.array.picturesOne);
         PicturesArrayTwo=getResources().obtainTypedArray(R.array.picturesTwo);
         PicturesArrayThree=getResources().obtainTypedArray(R.array.picturesThree);
+        TumbnailArray=getResources().obtainTypedArray(R.array.pictureTumbnail);
 
-        Log.i("slija",""+getResources().getDrawable(R.drawable.vl1));
+
         for(int i=0;i<=5;i++){
             Place place1=new Place();
             place1.setPlaceName(PlaceArray[i]);
@@ -78,6 +79,8 @@ public class FragmentA extends Fragment{
             place1.setImgOne(PicturesArrayOne.getResourceId(i, 0));
             place1.setImgTwo(PicturesArrayTwo.getResourceId(i, 0));
             place1.setImgThree(PicturesArrayThree.getResourceId(i, 0));
+            place1.setImgTbn(TumbnailArray.getResourceId(i, 0));
+
 
 
             arrayPlace.add(place1);

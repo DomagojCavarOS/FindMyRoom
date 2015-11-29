@@ -8,12 +8,18 @@
     android:paddingBottom="0dp"
     tools:context="com.d42gmail.cavar.findmyroom.Show">
 
+    <include android:id="@+id/Appbar1"
+        layout="@layout/app_bar"
+        android:layout_alignParentTop="true"
+        android:layout_height="62dp"
+        android:layout_width="match_parent" />
+
     <fragment
+        android:layout_below="@id/Appbar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:name="com.d42gmail.cavar.findmyroom.FragmentB"
         android:id="@+id/fragment2"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

@@ -63,7 +63,7 @@ public class PlaceAdapter extends BaseAdapter {
 
         Place currentPlace=arrayAdapterList.get(position);
 
-        image_item.setImageResource(currentPlace.getImageMain());
+        image_item.setImageResource(currentPlace.getImgTbn());
         name_item.setText("" + currentPlace.getPlaceName());
         adress_item.setText(String.format("%s \n %s",currentPlace.getPlaceAdress(),currentPlace.getPlaceCity()));
 

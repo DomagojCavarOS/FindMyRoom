@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:name="com.d42gmail.cavar.findmyroom.FragmentA"
         android:id="@+id/fragment"
-        android:layout_gravity="left|center_vertical"/>
+        android:layout_gravity="left|top"/>
 
     <fragment
         android:layout_weight="1"
@@ -17,5 +17,5 @@
         android:layout_height="wrap_content"
         android:name="com.d42gmail.cavar.findmyroom.FragmentB"
         android:id="@+id/fragment2"
-        android:layout_gravity="left|center_vertical"/>
+        android:layout_gravity="left|top"/>
 </LinearLayout>

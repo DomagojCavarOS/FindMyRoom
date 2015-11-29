@@ -7,25 +7,36 @@ import android.content.res.TypedArray;
  */
 public class Place {
 
-    int imageMain,imgOne, imgTwo,imgThree,placeRate;
+    int imageMain,imgOne, imgTwo,imgThree,placeRate,imgTbn;
     String placeName,placeAdress,placeDescription,placeCity;
 
-    public Place(int imageMain, int imgOne, int imgTwo, int imgThree,int placeRate, String placeName,String placeCity, String placeAdress, String placeDescription) {
+    public Place(int imageMain, int imgOne, int imgTwo, int imgThree,int imgTbn,int placeRate, String placeName,String placeCity, String placeAdress, String placeDescription) {
         this.imageMain = imageMain;
         this.imgOne = imgOne;
         this.imgTwo = imgTwo;
         this.imgThree = imgThree;
+        this.imgTbn=imgTbn;
         this.placeRate=placeRate;
         this.placeName = placeName;
         this.placeCity=placeCity;
         this.placeAdress = placeAdress;
         this.placeDescription = placeDescription;
+
+
+
     }
     public Place()
     {
 
     }
 
+    public int getImgTbn() {
+        return imgTbn;
+    }
+
+    public void setImgTbn(int imgTbn) {
+        this.imgTbn = imgTbn;
+    }
 
     public int getImageMain() {
         return imageMain;

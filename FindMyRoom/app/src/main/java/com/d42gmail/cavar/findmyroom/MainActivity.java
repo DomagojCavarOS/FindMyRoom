@@ -10,6 +10,8 @@ import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements FragmentA.Communucator {
 
@@ -69,8 +71,9 @@ public class MainActivity extends AppCompatActivity implements FragmentA.Communu
             intent.putExtra("PlaceAdress",place.getPlaceAdress());
             intent.putExtra("PlaceCity",place.getPlaceCity());
             intent.putExtra("PlaceDescription",place.getPlaceDescription());
-            startActivityForResult(intent,0);
+            startActivityForResult(intent, 0);
             Log.i("stanje", "Tapblet Portrait");
+            Log.i("rating","main prije intent: "+place.getPlaceRate());
 
         }
 
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements FragmentA.Communu
     }
 
     private void layoutChange() {
+
         fragB.mainImage.requestLayout();
         fragB.mainImage.getLayoutParams().height=350;
         fragB.imageOne.requestLayout();
@@ -90,11 +94,15 @@ public class MainActivity extends AppCompatActivity implements FragmentA.Communu
         fragB.imageThree.getLayoutParams().height=175;
         fragB.imageThree.getLayoutParams().width=175;
 
+        fragB.mainImage.setClickable(true);
+        fragB.imageOne.setClickable(true);
+        fragB.imageTwo.setClickable(true);
+        fragB.imageThree.setClickable(true);
+
+
     }
 
     public static boolean tabletTest(Context context) {
-        return (context.getResources().getConfiguration().screenLayout
-                & Configuration.SCREENLAYOUT_SIZE_MASK)
-                >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+        return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
     }
 }

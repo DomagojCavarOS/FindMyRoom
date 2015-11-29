@@ -1,20 +1,15 @@
 package com.d42gmail.cavar.findmyroom;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.DragEvent;
@@ -24,7 +19,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -51,14 +45,11 @@ public class FragmentB extends android.app.Fragment {
         Name = (TextView) view.findViewById(R.id.idName);
         Adress = (TextView) view.findViewById(R.id.idAdress);
         Description = (TextView) view.findViewById(R.id.idDescription);
-
+        Drawable drawable = ratingBar.getProgressDrawable();
         final Boolean isTablet=MainActivity.tabletTest(getActivity());
         Log.i("tablet","jesam li tablet? "+MainActivity.tabletTest(getActivity()));
 
-        Drawable drawable = ratingBar.getProgressDrawable();
-        drawable.setColorFilter(Color.parseColor("#FF4321"), PorterDuff.Mode.SRC_IN);
-
-
+        drawable.setColorFilter(Color.parseColor("#E58F65"), PorterDuff.Mode.SRC_ATOP);
 
 
         Description.setOnDragListener(new View.OnDragListener() {
@@ -94,7 +85,7 @@ public class FragmentB extends android.app.Fragment {
                 }
                 else
                 {
-                    Drawable imgdraw1=imageOne.getDrawable();
+
                     showImage(null, imageOne.getDrawable(), false);
                 }
             }
