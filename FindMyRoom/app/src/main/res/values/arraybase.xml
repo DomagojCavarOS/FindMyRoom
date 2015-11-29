@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="place">
+        <item>OPG Miletić</item>
+        <item>Villa Lenije</item>
+        <item>Salaš Bać Roka</item>
+        <item>Vuglec Breg</item>
+        <item>Radmanove mlinice</item>
+    </array>
+
+    <array name="adress">
+        <item>Nikole Tesle 18</item>
+        <item>Osječka 20</item>
+        <item>Vukovarska 110</item>
+        <item>Škarićevo 151</item>
+        <item>Kralja Tomislava 2</item>
+    </array>
+
+    <array name="city">
+        <item>31000 Županja</item>
+        <item>32100 Vinkovci</item>
+        <item>35100 Otok</item>
+        <item>22100 Škarićevo</item>
+        <item>52100 Omiš</item>
+    </array>
+    
+    <array name="description">
+        <item>Mi smo mala tročlana obitelj iz Županje koja je nakon vrlo užurbanog životnog ritma našla svoj mir u
+            idiličnom Karancu u koji smo se zaljubili na prvi pogled. U želji da naš sin odrasta u što zdravijem okruženju,
+            u Baranji smo nakon dužeg traganja pronašli svoju mirnu oazu.</item>
+        <item>Hotel Villa Lenije je kombinacija tradicionalne i moderne arhitekture.
+            Sastoji se od starog obnovljenog dijela Ville Lenije  i novoizgrađenog dijela modernog unutarnjeg uređenja.
+            Hotel Villa Lenije idealno je mjesto za sve one koji žele uživati u idiličnoj atmosferi,
+            a u isto vrijeme u blizini svih događaja u gradu.</item>
+        <item>Na temelju jednog malog seoskog imanja sagrađenog još početkom 20 st. nastao je salaš Bać Roka. Krasi ga ljepota
+            tradicionalne arhitekture, mnoštvo zelenila i netaknute prirode, te plodna slavonska zemlja.
+            Već samim dolaskom pred salaš osjetit ćete pravi ugođaj pitomog slavonskog sela, a otkrivši sve ljepote
+            i blagodati ovog salaša poželjet ćete ostati, daleko od gratske gužve i vreve.</item>
+        <item>Turističko selo „Vuglec Breg“  plod je stvaralačke i romantičarske vizije obitelji Vuglec, koja je željela baštinu svojih predaka,
+            starih Vugleca, pretvoriti u trajnu vrijednost. Ideja vodilja bila nam je stvaranje jedinstvenog ambijenta za vrhunski ugođaj i potpuni
+            užitak u prirodnom okruženju prelijepog Hrvatskog zagorja.</item>
+        <item>Tijekom stoljeća rijeka Cetina na svom je putu prema moru usjekla veličanstven kanjon. Svojim gromoglasnim hukom donosila je snagu koja je stoljećima
+            pokretala mlinska kola, a zatim nalazila smiraj u dodiru s morem. U tom spoju brzaca i mirnog toka već u 17. i 18. stoljeću spominju se mlinice, koje svoj procvat
+            doživljavaju sredinom 19. stoljeća kad ih preuređuje obitelj Radman po kojoj i danas nose ime.</item>
+    </array>
+
+    <integer-array name="rate">
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>5</item>
+        <item>5</item>
+    </integer-array>
+
+    <array name="picturesMain">
+        <item>@drawable/m3</item>
+        <item>@drawable/vl1</item>
+        <item>@drawable/bc2</item>
+        <item>@drawable/vb1</item>
+        <item>@drawable/rm1</item>
+    </array>
+
+    <array name="picturesOne">
+        <item>@drawable/m2</item>
+        <item>@drawable/vl2</item>
+        <item>@drawable/bc1</item>
+        <item>@drawable/vb2</item>
+        <item>@drawable/rm2</item>
+    </array>
+
+    <array name="picturesTwo">
+        <item>@drawable/m1</item>
+        <item>@drawable/vl3</item>
+        <item>@drawable/bc2</item>
+        <item>@drawable/vb3</item>
+        <item>@drawable/rm3</item>
+    </array>
+
+    <array name="picturesThree">
+        <item>@drawable/m4</item>
+        <item>@drawable/vl4</item>
+        <item>@drawable/bc3</item>
+        <item>@drawable/vb4</item>
+        <item>@drawable/rm4</item>
+    </array>
+</resources>
