@@ -2,10 +2,12 @@ package com.d42gmail.cavar.findmyroom;
 
 import android.content.res.TypedArray;
 
+import java.io.Serializable;
+
 /**
  * Created by Enigma on 27.11.2015..
  */
-public class Place {
+public class Place implements Serializable {
 
     int imageMain,imgOne, imgTwo,imgThree,placeRate,imgTbn;
     String placeName,placeAdress,placeDescription,placeCity;
@@ -27,6 +29,16 @@ public class Place {
     }
     public Place()
     {
+        imageMain=R.drawable.andro;
+        imgOne=R.drawable.error;
+        imgTwo=R.drawable.error;
+        imgThree=R.drawable.error;
+        imgTbn=R.drawable.error;
+        placeRate=0;
+        placeName="N/A";
+        placeCity="N/A";
+        placeAdress="N/A";
+        placeDescription="N/A";
 
     }
 

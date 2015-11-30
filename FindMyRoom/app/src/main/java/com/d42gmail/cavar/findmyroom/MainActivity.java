@@ -7,11 +7,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
 import android.widget.ImageView;
+
+import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity implements FragmentA.Communucator {
 
@@ -62,18 +65,8 @@ public class MainActivity extends AppCompatActivity implements FragmentA.Communu
         else
         {
             Intent intent=new Intent(this,Show.class);
-            intent.putExtra("PictureMain",place.getImageMain());
-            intent.putExtra("PictureOne",place.getImgOne());
-            intent.putExtra("PictureTwo",place.getImgTwo());
-            intent.putExtra("PictureThree",place.getImgThree());
-            intent.putExtra("RateBar",place.getPlaceRate());
-            intent.putExtra("PlaceName",place.getPlaceName());
-            intent.putExtra("PlaceAdress",place.getPlaceAdress());
-            intent.putExtra("PlaceCity",place.getPlaceCity());
-            intent.putExtra("PlaceDescription",place.getPlaceDescription());
+            intent.putExtra("PlaceClass", place);
             startActivityForResult(intent, 0);
-            Log.i("stanje", "Tapblet Portrait");
-            Log.i("rating","main prije intent: "+place.getPlaceRate());
 
         }
 

@@ -3,6 +3,7 @@ package com.d42gmail.cavar.findmyroom;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -31,36 +32,18 @@ public class Show extends Activity {
         back= (ImageButton) findViewById(R.id.app_bar_backButton);
         AppBarName= (TextView) findViewById(R.id.app_bar_Text);
 
-        Bundle extras = getIntent().getExtras();
-
-            String Name  = extras.getString("PlaceName");
-            String Adress  = extras.getString("PlaceAdress");
-            String City  = extras.getString("PlaceCity");
-            String Description = extras.getString("PlaceDescription");
-            int imgMain=extras.getInt("PictureMain");
-            int imgOne=extras.getInt("PictureOne");
-            int imgTwo=extras.getInt("PictureTwo");
-            int imgThree=extras.getInt("PictureThree");
-            int rating=extras.getInt("RateBar");
-            Log.i("rating", "Rating portret show: " + rating);
-
+        Log.i("obj","proso");
+        Place place= new Place();
+        Intent intent=getIntent();
+        place= (Place) intent.getSerializableExtra("PlaceClass");
 
         fragmentManager=getFragmentManager();
         fragB= (FragmentB) fragmentManager.findFragmentById(R.id.fragment2);
-        fragB.mainImage.setImageResource(imgMain);
-        fragB.imageOne.requestLayout();
-        fragB.imageOne.setImageResource(imgOne);
-        fragB.imageTwo.setImageResource(imgTwo);
-        fragB.imageThree.setImageResource(imgThree);
-        fragB.Name.setText("" + Name);
-        fragB.Adress.setText(String.format("%s\n%s",Adress,City));
-        fragB.Description.setText(""+Description);
-        fragB.ratingBar.setRating(rating);
+
+        setContent(place);
 
         setClickable();
 
-
-        AppBarName.setText(""+Name);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +51,18 @@ public class Show extends Activity {
             }
         });
 
+    }
+
+    private void setContent(Place place) {
+
+        fragB.mainImage.setImageResource(place.getImageMain());
+        fragB.imageOne.setImageResource(place.getImgOne());
+        fragB.imageTwo.setImageResource(place.getImgTwo());
+        fragB.imageThree.setImageResource(place.getImgThree());
+        fragB.Name.setText("" + place.getPlaceName());
+        fragB.Adress.setText(String.format("%s\n%s",place.getPlaceAdress(),place.getPlaceCity()));
+        fragB.Description.setText(""+place.getPlaceDescription());
+        fragB.ratingBar.setRating(place.getPlaceRate());
     }
 
     private void setClickable() {

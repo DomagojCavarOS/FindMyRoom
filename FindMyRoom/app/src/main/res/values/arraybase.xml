@@ -29,7 +29,7 @@
         <item>63100 Velika Lešnica</item>
 
     </array>
-    
+
     <array name="description">
         <item>Nacionalni park Plitvička jezera osobita je geološka i hidrogeološka krška pojava.
             Kompleks Plitvičkih jezera proglašen je nacionalnim parkom 8. travnja 1949. godine.
@@ -49,7 +49,7 @@
             doživljavaju sredinom 19. stoljeća kad ih preuređuje obitelj Radman po kojoj i danas nose ime.</item>
         <item>Ova bajkovita kuća nalazi se na proplanku sela Velika Lešnica, pored Broda na Kupi. Slovenska granica udaljena je samo dva, a Delnice 9 kilometara. Nedaleko kuće je
             Dolina leptira u kojoj možete uživati u ljepoti i bogatstvu boja ovih letećih ljepotana, a osim toga, za vrućih ljetnih dana osvježenje možete potražiti na obližnjoj rijeci Kupi.</item>
-           </array>
+    </array>
 
     <integer-array name="rate">
         <item>5</item>
@@ -102,7 +102,7 @@
     </array>
     <array name="pictureTumbnail">
         <item>@drawable/tpj4</item>
-        <item>@drawable/tgk1</item>
+        <item>@drawable/tkr2</item>
         <item>@drawable/tsbr2</item>
         <item>@drawable/tvb1</item>
         <item>@drawable/trm1</item>
