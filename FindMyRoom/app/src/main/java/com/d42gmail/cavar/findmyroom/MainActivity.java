@@ -1,20 +1,13 @@
 package com.d42gmail.cavar.findmyroom;
 
-import android.app.ActionBar;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.os.Parcelable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Window;
-import android.widget.ImageView;
-
-import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity implements Communicator {
 

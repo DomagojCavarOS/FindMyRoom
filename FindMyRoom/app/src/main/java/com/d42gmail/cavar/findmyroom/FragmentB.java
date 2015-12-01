@@ -10,9 +10,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
-import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -116,7 +114,7 @@ public class FragmentB extends android.app.Fragment implements Communicator {
 
     }
 
-    public void showImage(Bitmap imgdraw) {
+    private void showImage(Bitmap imgdraw) {
 
         Dialog builder = new Dialog(getActivity());
         builder.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -125,7 +123,6 @@ public class FragmentB extends android.app.Fragment implements Communicator {
         builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialogInterface) {
-                //nothing;
             }
         });
 

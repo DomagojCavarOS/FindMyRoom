@@ -2,11 +2,7 @@ package com.d42gmail.cavar.findmyroom;
 
 import android.app.Fragment;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,8 +11,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.io.File;
-import java.net.URL;
 import java.util.ArrayList;
 
 /**
