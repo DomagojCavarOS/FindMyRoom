@@ -26,7 +26,7 @@ import android.widget.TextView;
 /**
  * Created by Enigma on 27.11.2015..
  */
-public class FragmentB extends android.app.Fragment implements Communicator, View.OnClickListener {
+public class FragmentB extends android.app.Fragment implements Communicator {
     ImageView mainImage;
     ImageButton imageOne, imageTwo, imageThree;
     RatingBar ratingBar;
@@ -150,8 +150,4 @@ public class FragmentB extends android.app.Fragment implements Communicator, Vie
         return mutableBitmap;
     }
 
-    @Override
-    public void onClick(View v) {
-
-    }
 }
