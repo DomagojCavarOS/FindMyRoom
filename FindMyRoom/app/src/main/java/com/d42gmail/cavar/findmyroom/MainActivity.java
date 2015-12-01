@@ -16,11 +16,12 @@ import android.widget.ImageView;
 
 import java.io.Serializable;
 
-public class MainActivity extends AppCompatActivity implements FragmentA.Communucator {
+public class MainActivity extends AppCompatActivity implements Communicator {
 
     FragmentA fragA;
     FragmentB fragB;
     FragmentManager fragmentManager;
+    Communicator comm1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements FragmentA.Communu
 
         fragmentManager=getFragmentManager();
         fragA = (FragmentA) fragmentManager.findFragmentById(R.id.fragment);
-        fragA.setCommunicator(this);
+
     }
 
     @Override
@@ -50,22 +51,19 @@ public class MainActivity extends AppCompatActivity implements FragmentA.Communu
         fragB= (FragmentB) fragmentManager.findFragmentById(R.id.fragment2);
 
         if(fragB != null && fragB.isVisible())
-        {//ako je tablet na landscapeu
+        {//ako je tablet na landscape-u
+
             layoutChange();
-            fragB.mainImage.setImageResource(place.getImageMain());
-            fragB.imageOne.setImageResource(place.getImgOne());
-            fragB.imageTwo.setImageResource(place.getImgTwo());
-            fragB.imageThree.setImageResource(place.getImgThree());
-            fragB.Name.setText(place.getPlaceName());
-            fragB.Description.setText(place.getPlaceDescription());
-            fragB.Adress.setText(String.format("%s\n%s",place.getPlaceAdress(),place.getPlaceCity()));
-            fragB.ratingBar.setRating(place.getPlaceRate());
-            Log.i("stanje", "Tablet Landscape");
+            comm1=fragB;
+            comm1.respond(place);
+
+
         }
         else
         {
             Intent intent=new Intent(this,Show.class);
             intent.putExtra("PlaceClass", place);
+            Log.i("test", "prosao itent");
             startActivityForResult(intent, 0);
 
         }

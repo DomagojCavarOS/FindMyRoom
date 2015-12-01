@@ -17,11 +17,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Show extends Activity {
+public class Show extends Activity implements Communicator {
     FragmentB fragB;
     FragmentManager fragmentManager;
     ImageButton back;
     TextView AppBarName;
+    Communicator comm2;
 
 
     @Override
@@ -32,7 +33,6 @@ public class Show extends Activity {
         back= (ImageButton) findViewById(R.id.app_bar_backButton);
         AppBarName= (TextView) findViewById(R.id.app_bar_Text);
 
-        Log.i("obj","proso");
         Place place= new Place();
         Intent intent=getIntent();
         place= (Place) intent.getSerializableExtra("PlaceClass");
@@ -40,9 +40,10 @@ public class Show extends Activity {
         fragmentManager=getFragmentManager();
         fragB= (FragmentB) fragmentManager.findFragmentById(R.id.fragment2);
 
-        setContent(place);
+        AppBarName.setText(""+place.getPlaceName());
 
-        setClickable();
+        comm2=fragB;
+        comm2.respond(place);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,24 +54,9 @@ public class Show extends Activity {
 
     }
 
-    private void setContent(Place place) {
 
-        fragB.mainImage.setImageResource(place.getImageMain());
-        fragB.imageOne.setImageResource(place.getImgOne());
-        fragB.imageTwo.setImageResource(place.getImgTwo());
-        fragB.imageThree.setImageResource(place.getImgThree());
-        fragB.Name.setText("" + place.getPlaceName());
-        fragB.Adress.setText(String.format("%s\n%s",place.getPlaceAdress(),place.getPlaceCity()));
-        fragB.Description.setText(""+place.getPlaceDescription());
-        fragB.ratingBar.setRating(place.getPlaceRate());
-    }
-
-    private void setClickable() {
-        fragB.mainImage.setClickable(true);
-        fragB.imageOne.setClickable(true);
-        fragB.imageTwo.setClickable(true);
-        fragB.imageThree.setClickable(true);
+    @Override
+    public void respond(Place place) {
 
     }
-
 }

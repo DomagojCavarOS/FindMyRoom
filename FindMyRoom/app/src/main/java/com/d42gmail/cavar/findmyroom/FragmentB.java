@@ -26,11 +26,12 @@ import android.widget.TextView;
 /**
  * Created by Enigma on 27.11.2015..
  */
-public class FragmentB extends android.app.Fragment {
+public class FragmentB extends android.app.Fragment implements Communicator, View.OnClickListener {
     ImageView mainImage;
     ImageButton imageOne, imageTwo, imageThree;
     RatingBar ratingBar;
     TextView Name, Adress, Description;
+    Place place=new Place();
 
     @Nullable
     @Override
@@ -45,79 +46,77 @@ public class FragmentB extends android.app.Fragment {
         Name = (TextView) view.findViewById(R.id.idName);
         Adress = (TextView) view.findViewById(R.id.idAdress);
         Description = (TextView) view.findViewById(R.id.idDescription);
+
         Drawable drawable = ratingBar.getProgressDrawable();
-        final Boolean isTablet=MainActivity.tabletTest(getActivity());
-        Log.i("tablet","jesam li tablet? "+MainActivity.tabletTest(getActivity()));
-
         drawable.setColorFilter(Color.parseColor("#E58F65"), PorterDuff.Mode.SRC_ATOP);
-
-
-        Description.setOnDragListener(new View.OnDragListener() {
-            @Override
-            public boolean onDrag(View v, DragEvent event) {
-                Description.setMovementMethod(new ScrollingMovementMethod());
-                return false;
-            }
-        });
 
         mainImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isTablet==true) {
-                    showImage(convertToBitmap(mainImage.getDrawable()),mainImage.getDrawable(),true);
-                    Log.i("tablet", "da");
-                }
-                else
-                {
-                    showImage(null,mainImage.getDrawable(),false);
-                    Log.i("tablet","ne");
-                }
-
+                showImage(convertToBitmap(getResources().getDrawable(place.getImageMain()),700,430));
             }
         });
 
         imageOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isTablet==true) {
-                    Drawable imgdraw1=imageOne.getDrawable();
-                    showImage(convertToBitmap(imgdraw1), imageOne.getDrawable(), true);
-                }
-                else
-                {
-
-                    showImage(null, imageOne.getDrawable(), false);
-                }
+                showImage(convertToBitmap(getResources().getDrawable(place.getImgOne()),700,430));
             }
         });
+
         imageTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isTablet==true) {
-                    showImage(convertToBitmap(imageTwo.getDrawable()), imageTwo.getDrawable(), true);
-                }
-                else
-                {
-                    showImage(null, imageTwo.getDrawable(), false);
-                }
-            }
-        });
-        imageThree.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isTablet==true) {
-                    showImage(convertToBitmap(imageThree.getDrawable()), imageThree.getDrawable(), true);
-                }
-                else
-                {
-                    showImage(null, imageThree.getDrawable(), false);
-                }
+                showImage(convertToBitmap(getResources().getDrawable(place.getImgTwo()),700,430));
             }
         });
 
+        imageThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showImage(convertToBitmap(getResources().getDrawable(place.getImgThree()),700,430));
+            }
+        });
+
+
         return view;
     }
-    public void showImage(Bitmap img,Drawable imgdraw,boolean tablet) {
+
+
+
+    @Override
+    public void respond(final Place place) {
+
+        this.place=place;
+        setClicble();
+        setContent();
+
+    }
+
+    private void setClicble() {
+
+            mainImage.setClickable(true);
+            imageOne.setClickable(true);
+            imageTwo.setClickable(true);
+            imageThree.setClickable(true);
+
+
+    }
+
+    private void setContent() {
+
+        mainImage.setImageBitmap(convertToBitmap(getResources().getDrawable(place.getImageMain()), 700, 430));
+        imageOne.setImageBitmap(convertToBitmap(getResources().getDrawable(place.getImgOne()), 330, 200));
+        imageTwo.setImageBitmap(convertToBitmap(getResources().getDrawable(place.getImgTwo()), 330, 200));
+        imageThree.setImageBitmap(convertToBitmap(getResources().getDrawable(place.getImgThree()),330,200));
+        Name.setText(place.getPlaceName());
+        Description.setText(place.getPlaceDescription());
+        Adress.setText(String.format("%s\n%s",place.getPlaceAdress(),place.getPlaceCity()));
+        ratingBar.setRating(place.getPlaceRate());
+
+    }
+
+    public void showImage(Bitmap imgdraw) {
 
         Dialog builder = new Dialog(getActivity());
         builder.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -132,30 +131,27 @@ public class FragmentB extends android.app.Fragment {
 
         ImageView imageView = new ImageView(getActivity());
 
-        if(tablet==true)
-        {
-            imageView.setImageBitmap(img);
-        }
-        else
-        {
-            imageView.setImageDrawable(imgdraw);
-        }
+        imageView.setImageBitmap(imgdraw);
+
         builder.addContentView(imageView, new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT));
         builder.show();
     }
 
+    public Bitmap convertToBitmap(Drawable drawable, int widith, int height) {
 
-    public Bitmap convertToBitmap(Drawable drawable) {
-
-        Log.i("tablet","convertToBitmap");
-        Bitmap mutableBitmap = Bitmap.createBitmap(640, 420, Bitmap.Config.ARGB_8888);
+        Log.i("tablet", "convertToBitmap");
+        Bitmap mutableBitmap = Bitmap.createBitmap(widith, height, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(mutableBitmap);
-        drawable.setBounds(0, 0, 640, 420);
+        drawable.setBounds(0, 0, widith, height);
         drawable.draw(canvas);
 
         return mutableBitmap;
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }

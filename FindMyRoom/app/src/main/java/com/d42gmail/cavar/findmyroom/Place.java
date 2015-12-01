@@ -1,7 +1,4 @@
 package com.d42gmail.cavar.findmyroom;
-
-import android.content.res.TypedArray;
-
 import java.io.Serializable;
 
 /**
@@ -9,7 +6,7 @@ import java.io.Serializable;
  */
 public class Place implements Serializable {
 
-    int imageMain,imgOne, imgTwo,imgThree,placeRate,imgTbn;
+    int imageMain,imgOne, imgTwo,imgThree,imgTbn,placeRate;
     String placeName,placeAdress,placeDescription,placeCity;
 
     public Place(int imageMain, int imgOne, int imgTwo, int imgThree,int imgTbn,int placeRate, String placeName,String placeCity, String placeAdress, String placeDescription) {
@@ -29,7 +26,7 @@ public class Place implements Serializable {
     }
     public Place()
     {
-        imageMain=R.drawable.andro;
+        imageMain=R.drawable.error;
         imgOne=R.drawable.error;
         imgTwo=R.drawable.error;
         imgThree=R.drawable.error;

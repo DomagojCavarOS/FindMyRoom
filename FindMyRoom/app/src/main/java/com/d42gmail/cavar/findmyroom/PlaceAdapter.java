@@ -48,7 +48,7 @@ public class PlaceAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView==null)
         {
-           convertView=View.inflate(ctx,R.layout.list_item,null);
+            convertView=View.inflate(ctx,R.layout.list_item,null);
         }
 
         image_item= (ImageView) convertView.findViewById(R.id.idImage_item);
@@ -58,7 +58,7 @@ public class PlaceAdapter extends BaseAdapter {
         Boolean isTablet=MainActivity.tabletTest(ctx);
         if(isTablet==true)
         {
-        itemLayoutChange(convertView);
+            itemLayoutChange(convertView);
         }
 
         Place currentPlace=arrayAdapterList.get(position);
