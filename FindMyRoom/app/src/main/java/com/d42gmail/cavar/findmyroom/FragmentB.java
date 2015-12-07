@@ -106,10 +106,10 @@ public class FragmentB extends android.app.Fragment implements Communicator {
         mainImage.setImageBitmap(convertToBitmap(getResources().getDrawable(place.getImageMain()), 700, 430));
         imageOne.setImageBitmap(convertToBitmap(getResources().getDrawable(place.getImgOne()), 330, 200));
         imageTwo.setImageBitmap(convertToBitmap(getResources().getDrawable(place.getImgTwo()), 330, 200));
-        imageThree.setImageBitmap(convertToBitmap(getResources().getDrawable(place.getImgThree()),330,200));
+        imageThree.setImageBitmap(convertToBitmap(getResources().getDrawable(place.getImgThree()), 330, 200));
         Name.setText(place.getPlaceName());
         Description.setText(place.getPlaceDescription());
-        Adress.setText(String.format("%s\n%s",place.getPlaceAdress(),place.getPlaceCity()));
+        Adress.setText(String.format("%s\n%s", place.getPlaceAdress(), place.getPlaceCity()));
         ratingBar.setRating(place.getPlaceRate());
 
     }
@@ -118,14 +118,7 @@ public class FragmentB extends android.app.Fragment implements Communicator {
 
         Dialog builder = new Dialog(getActivity());
         builder.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        builder.getWindow().setBackgroundDrawable(
-                new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialogInterface) {
-            }
-        });
-
+        builder.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         ImageView imageView = new ImageView(getActivity());
 
         imageView.setImageBitmap(imgdraw);

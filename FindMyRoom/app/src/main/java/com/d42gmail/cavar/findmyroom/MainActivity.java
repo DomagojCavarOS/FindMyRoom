@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+
 public class MainActivity extends AppCompatActivity implements Communicator {
 
     FragmentA fragA;
@@ -30,8 +31,6 @@ public class MainActivity extends AppCompatActivity implements Communicator {
             Log.i("prikaz","mob sam");
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
-
-
 
         fragmentManager=getFragmentManager();
         fragA = (FragmentA) fragmentManager.findFragmentById(R.id.fragment);
@@ -87,6 +86,8 @@ public class MainActivity extends AppCompatActivity implements Communicator {
     }
 
     public static boolean tabletTest(Context context) {
+
         return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+
     }
 }

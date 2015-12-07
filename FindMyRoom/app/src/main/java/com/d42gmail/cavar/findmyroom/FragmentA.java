@@ -35,7 +35,6 @@ public class FragmentA extends Fragment implements Communicator{
         View view= inflater.inflate(R.layout.fragmenta,container,false);
 
         listView= (android.widget.ListView) view.findViewById(R.id.listView);
-        Place place=new Place();
         adapter=new PlaceAdapter(getActivity(),Populate(arrayPlaces));
         listView.setAdapter(adapter);
 
@@ -44,9 +43,7 @@ public class FragmentA extends Fragment implements Communicator{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Place place = new Place();
-                place = adapter.getItem(position);
-                comm.respond(place);
+                comm.respond(adapter.getItem(position));
 
             }
         });
@@ -81,9 +78,6 @@ public class FragmentA extends Fragment implements Communicator{
             place1.setImgTwo(PicturesArrayTwo.getResourceId(i, 0));
             place1.setImgThree(PicturesArrayThree.getResourceId(i, 0));
             place1.setImgTbn(TumbnailArray.getResourceId(i, 0));
-
-            Log.i("asd",""+place1.getImgOne());
-
 
             arrayPlace.add(place1);
         }

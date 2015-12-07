@@ -9,21 +9,6 @@ public class Place implements Serializable {
     int imageMain,imgOne, imgTwo,imgThree,imgTbn,placeRate;
     String placeName,placeAdress,placeDescription,placeCity;
 
-    public Place(int imageMain, int imgOne, int imgTwo, int imgThree,int imgTbn,int placeRate, String placeName,String placeCity, String placeAdress, String placeDescription) {
-        this.imageMain = imageMain;
-        this.imgOne = imgOne;
-        this.imgTwo = imgTwo;
-        this.imgThree = imgThree;
-        this.imgTbn=imgTbn;
-        this.placeRate=placeRate;
-        this.placeName = placeName;
-        this.placeCity=placeCity;
-        this.placeAdress = placeAdress;
-        this.placeDescription = placeDescription;
-
-
-
-    }
     public Place()
     {
         imageMain=R.drawable.error;

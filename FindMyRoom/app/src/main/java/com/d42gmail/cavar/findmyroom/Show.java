@@ -21,7 +21,9 @@ public class Show extends Activity implements Communicator {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         back= (ImageButton) findViewById(R.id.app_bar_backButton);
         AppBarName= (TextView) findViewById(R.id.app_bar_Text);
 
