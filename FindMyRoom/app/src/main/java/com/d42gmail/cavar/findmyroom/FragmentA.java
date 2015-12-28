@@ -4,8 +4,11 @@ import android.app.Fragment;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -16,11 +19,11 @@ import java.util.ArrayList;
 /**
  * Created by Enigma on 27.11.2015..
  */
-public class FragmentA extends Fragment implements Communicator{
+public class FragmentA extends Fragment {
 
-    ListView listView;
+    RecyclerView recyclerView;
     ArrayList<Place> arrayPlaces=new ArrayList<Place>();
-    PlaceAdapter adapter;
+    RecyclePlaceAdapter adapter;
     Communicator comm;
     String[] PlaceArray;
     String[] AdresArray;
@@ -32,21 +35,12 @@ public class FragmentA extends Fragment implements Communicator{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view= inflater.inflate(R.layout.fragmenta,container,false);
+        final View view= inflater.inflate(R.layout.fragmenta,container,false);
 
-        listView= (android.widget.ListView) view.findViewById(R.id.listView);
-        adapter=new PlaceAdapter(getActivity(),Populate(arrayPlaces));
-        listView.setAdapter(adapter);
-
-        comm= (Communicator) getActivity();
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                comm.respond(adapter.getItem(position));
-
-            }
-        });
+        recyclerView= (RecyclerView) view.findViewById(R.id.RecyclePlaceAdapter);
+        adapter=new RecyclePlaceAdapter(getActivity(),Populate(arrayPlaces),recyclerView);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         return view;
     }
@@ -82,10 +76,5 @@ public class FragmentA extends Fragment implements Communicator{
             arrayPlace.add(place1);
         }
         return arrayPlace;
-    }
-
-    @Override
-    public void respond(Place place) {
-
     }
 }
